@@ -2,6 +2,7 @@ import { ChangeEvent, useState } from 'react';
 
 export const useForm = <T>(initialState:T) => {
 
+
     const [formData, setformData] = useState(initialState);
 
     const onChange = ({target}:ChangeEvent<HTMLInputElement>) => {

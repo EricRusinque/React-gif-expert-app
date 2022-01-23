@@ -17,7 +17,11 @@ export const MyTextInput = ({...props}:Props) => {
             <input
                 {...field } { ...props } 
             />
-            <ErrorMessage name={ props.name } component='span' />
+            <ErrorMessage 
+                component='span' 
+                className=""
+                name={ props.name } 
+            />
         </>
     );
 };
