@@ -2,7 +2,6 @@ import { Form, Formik } from 'formik';
 import { Dispatch } from 'react';
 import * as Yup from 'yup'
 import { MyTextInput } from './MyTextInput';
-import { useLoading } from '../hooks/useLoading';
 
 interface Props {
     setCategories:  Dispatch<React.SetStateAction<string[]>>;
@@ -10,7 +9,6 @@ interface Props {
 
 export const AddCategory = ({ setCategories }:Props) => {
 
-    const { setLoading } = useLoading();
 
     return (
         <>
@@ -22,7 +20,6 @@ export const AddCategory = ({ setCategories }:Props) => {
                     
                     setTimeout(() => {
                         setCategories(prev =>[ value.category, ...prev]);                       
-                        setLoading(false)
                     }, 1500);
                     resetForm({
                         values:{
@@ -37,7 +34,7 @@ export const AddCategory = ({ setCategories }:Props) => {
                 })}
             >
                 {
-                    ({handleBlur, isSubmitting}) => (
+                    ({handleBlur }) => (
                         <Form>
                             <MyTextInput
                                 

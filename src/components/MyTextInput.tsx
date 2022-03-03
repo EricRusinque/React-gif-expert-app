@@ -19,7 +19,7 @@ export const MyTextInput = ({...props}:Props) => {
             />
             <ErrorMessage 
                 component='span' 
-                className=""
+                className='error-message'
                 name={ props.name } 
             />
         </>

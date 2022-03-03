@@ -1,29 +1,23 @@
-import { DataGifs } from './GifGrid';
 import { Loading } from './Loading';
+import { DataGifs } from '../interfaces/interfaces';
+
 interface Props {
   img: DataGifs;
-  loading: boolean;
 }
 
-export const GifsGridItem = ({ img,loading }:Props) => {
+export const GifsGridItem = ({ img }:Props) => {
 
 
   
   return (  
     <>
     {
-      loading 
-      ?
-      (
         <div className="card">
             <p> { img.title } </p>
             <img src={`${img.images}`}/>
         </div>
-      )
-        :
-        <Loading/>
-    }
-
+    }   
    </>
+
   )
 }

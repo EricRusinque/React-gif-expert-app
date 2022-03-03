@@ -23,6 +23,12 @@ input {
   filter: drop-shadow(0px 1px 4px #39C);
 }
 
+input:focus {
+  border: 1px solid red !important;
+}
+input:active {
+  border: 1px solid red !important;
+ }
 .principal-title {
   text-align: center;
   color: white;
@@ -102,7 +108,12 @@ h3{
 
 }
 
-
+.error-message {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  filter: drop-shadow(7px 5px 12px #39C);
+}
 
 
 .card p {
@@ -177,7 +188,7 @@ h3{
     text-align: center;
     flex-wrap: wrap;
     justify-content: center;
-    width: 93vw;
+    width: 87vw;
     height: 148vh;
   }
 }
@@ -189,7 +200,7 @@ h3{
     text-align: center;
     flex-wrap: wrap;
     justify-content: center;
-    width: 93vw;
+    width: 82vw;
     height: 278vh;
   }
 }
